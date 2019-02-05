@@ -11,8 +11,6 @@ export class AppComponent  {
   city = 'Kansas City';
   result: any;
   result2: any;
-  link1 = 'https://api.wunderground.com/api/4bbbc25f4f5946dd/conditions/q/MO/kansas%20city.json';
-  link2 = 'https://api.wunderground.com/api/36b799dc821d5836/hourly/q/MO/Kansas_City.json';
   constructor(private http: HttpClient) {
   }
   show() {
