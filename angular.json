@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-gzohhk": {
+    "angular-team_1_1": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-gzohhk",
+            "outputPath": "dist/angular-team_1_1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-gzohhk:build"
+            "browserTarget": "angular-team_1_1:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-gzohhk:build:production"
+              "browserTarget": "angular-team_1_1:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-gzohhk:build"
+            "browserTarget": "angular-team_1_1:build"
           }
         },
         "test": {
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-gzohhk:serve"
+            "devServerTarget": "angular-team_1_1:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-gzohhk:serve:production"
+              "devServerTarget": "angular-team_1_1:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "angular-gzohhk"
+  "defaultProject": "angular-team_1_1"
 }
