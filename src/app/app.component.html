@@ -1,0 +1,30 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Click the button!
+</p>
+
+<button (click)="show()">Show</button>
+<h3>{{result.current_observation.icon_url}}</h3>
+<img src="{{result.current_observation.icon_url}}">
+<div *ngIf="result">
+  <p>Q1</p>
+  <p>State Code: {{result.current_observation.display_location.state}}</p>
+  <p>City Name: {{result.current_observation.display_location.city}}</p>
+  <p>Q2</p>
+  <p>Temperature: {{result.current_observation.temp_f}} F : {{result.current_observation.temp_c}} C</p>
+  <p>Wind: {{result.current_observation.wind_string}}</p>
+  <p>Pressure: {{result.current_observation.pressure_in}}</p>
+  <p>Humidity: {{result.current_observation.relative_humidity}}</p>
+  <table style="width:80%">
+    <p>  Q3</p>
+    <tr>
+      <td><p>Time 1: {{result.current_observation.temp_f}} F</p></td>
+      <td> <p>Time 2: {{result.current_observation.temp_f}} F</p></td>
+      <td><p>Time 3: {{result.current_observation.temp_f}} F</p></td>
+      <td><p>Time 4: {{result.current_observation.temp_f}} F</p></td>
+      <td><p>Time 5: {{result.current_observation.pressure_in}}</p></td>
+      <td><p>Time 6: {{result.current_observation.relative_humidity}}</p></td>
+    </tr>
+
+  </table>
+</div>
