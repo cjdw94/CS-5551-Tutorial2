@@ -1,22 +1,30 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Ckick the button!
-</p>
-State code: <input type="text" [(ngModel)]="state"><br>
-City name: <input type="text" [(ngModel)]="city"><br><br>
-<button (click)="show()">Show</button>
+
+<table><tr><td>
+  <hello name="{{ name }}"></hello>
+  <p>
+    Ckick the button!
+  </p>
+  State code: <input type="text" [(ngModel)]="state"><br>
+  City name: <input type="text" [(ngModel)]="city"><br><br>
+  <button (click)="show()">Show</button>
+
+</td></tr></table>
 
 <div *ngIf="result">
-<img src="{{result.current_observation.icon_url}}">
-  <p>Q1</p>
-  <p>State Code: {{result.current_observation.display_location.state}}</p>
-  <p>City Name: {{result.current_observation.display_location.city}}</p>
-  <p>Q2</p>
-  <p>Temperature: {{result.current_observation.temp_f}} F : {{result.current_observation.temp_c}} C</p>
-  <p>Wind: {{result.current_observation.wind_string}}</p>
-  <p>Pressure: {{result.current_observation.pressure_in}}</p>
-  <p>Humidity: {{result.current_observation.relative_humidity}}</p>
   <table>
+    <tr>
+      <td>{{result.current_observation.display_location.city}}, {{result.current_observation.display_location.state}} <img src="{{result.current_observation.icon_url}}"></td>
+      <td>Wind: </td>
+      <td colspan="4">{{result.current_observation.wind_string}}</td>
+    </tr>
+    <tr>
+      <td>Pressure: </td>
+      <td>{{result.current_observation.pressure_in}}</td>
+      <td>Humidity: </td>
+      <td>{{result.current_observation.relative_humidity}}</td>
+      <td>Temperature: </td>
+      <td  colspan="1">{{result.current_observation.temp_f}} F : {{result.current_observation.temp_c}} C</td>
+    </tr>
     <tr>
       <td>Time</td>
       <td>{{result2.hourly_forecast[0].FCTTIME.civil}}</td>
